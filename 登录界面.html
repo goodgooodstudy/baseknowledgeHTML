@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+    <legend>用户详情</legend>
+    <!-- 表单 
+        action
+    表示向那个服务器地址提交表单数据
+    表单中的数据会以 key=value键值对格式向服务器进行提交
+    其中key是表单属性内的name属性值，value是表单组件的value值
+    如果表单组件是输入框，那么value就是输入框内的内容
+    method：表单的提交方式
+    1）get方法(获取)
+    将表单的数据放在浏览器中地址栏进行提交
+    格式：服务器地址？key1=value1&key2=value2...
+    ?前面为要提交的服务器地址，后面为要提交的数据
+    https://www.baidu.com/?username=张三&password=1234
+    这种提交的方式将数据放在浏览器的地址栏中，相对不安全
+    2）post方法（包装）   
+   将表单的数据放在请求实体中进行提交
+   在浏览器中不会显示出来，相对安全。
+
+
+
+    -->
+    <form action="https://www.baidu.com" 
+    method="get"
+    >
+    <!-- maxlength 限制字符数
+     readonly="readonly" 只读
+      disabled="disabled"  不能读写 （无法提交服务器）
+      属性名与属性值相同时，可以省略属性值的书写
+    -->
+    账号：<input 
+     type="text" 
+     name="username"
+     placeholder="手机号/用户民/邮箱/"
+     autofocus="autofocus"
+     maxlength="6"
+     minlength="3"
+     value="妲己"
+    readonly="readonly"
+    disabled="disabled"
+    />
+    <br>
+    密码：<input 
+    type="password" 
+    name="password"
+    value="1234"  
+    placeholder="请输入密码"
+    />
+      <br>
+      <!-- 默认提交  可以通过value修改 -->
+            我的性别
+             <!-- 1）checked="checked" 默认选中  
+            （属性名与属性值相同时，可以省略属性值的书写）
+             2）关联按钮与文本  做到点击文本跳转按钮属性
+            checked id="nv"
+             <label for="nv">女</label>
+        -->
+      <input/ type="radio" 
+             name="sex" 
+             value="男" 
+             checked id="nan"
+             
+      > <label for="nan">男</label>
+      <input/ type="radio" name="sex" value="女"
+      checked id="nv"
+      >  <label for="nv">女</label>
+      <br>
+我的爱好:
+<br>
+唱歌:<input type="checkbox" name="hobby" value="唱歌" checked/> 
+跳:<input type="checkbox" name="hobby" value="跳"/>  
+rap:<input type="checkbox" name="hobby" value="rap"/> 
+篮球:<input type="checkbox" name="hobby" value="篮球"/>
+music:<input type="checkbox" name="hobby" value="music"/>
+<br>
+<!-- 时间日期对话框 -->
+
+日期：<input type="date"  name="date"/>
+<br>
+时间：
+<input type="time" name="time"/>
+<br>
+日期时间：
+<input type="datetime-local" name="datetime"/>
+<br>
+月份： 
+   <input type="month" name="month"/>
+<br>
+星期：<input type="week" name="week"/>
+<br>
+
+
+颜色：<input type="color" name="color"/>
+<br>
+<!-- 检测是否含有@ -->
+邮箱：<input type="email" name="email"/>
+<br>
+
+电话：<input type="tel" name="tel"/>
+<br>
+<!-- 检测是否有http：// -->
+网址：<input type="url" name="url"/>
+<br>
+搜索块：<input type="search" name="search"/>
+<br>
+
+<!-- step 每次递增数字 -->
+数字：<input type="number" name="number"
+      min="11" max="99" step="5"
+/>
+<br>
+范围：<input type="range" name="range"
+     min="11" max="99" step="10"
+/>
+<br>
+
+隐藏域：<input type="hidden" name="hidden" value="100000"/>
+<br>
+图片：<input type="image" src="imgs/微信图片_20231110095014.jpg" width="50"/>
+<br><br><br><br><br>
+
+文件：<input type="file" name="file"/" />
+<br>
+下拉列表：
+籍贯
+<!-- 默认显示selected -->
+<select name="province" multiple size="5">
+<option value="shanxi" selected>山西</option>
+<option value="xian" selected>西安</option>
+<option value="ankang">安康</option>
+<option value="shangluo">商洛</option>
+<option value="mizhi">米脂</option>
+</select>
+
+ <br> <br> <br> <br>
+<!-- 文本域 -->
+自我介绍
+<textarea name="desc" cols="30" rows="10">
+</textarea>
+
+
+<br>
+ <!--submit等价于  <button>提交按钮</button> -->
+    <input type="submit" value="用户登录"/>
+    <input type="reset" value="重新填写"/>
+    <input type="button" value="普通按钮"/>
+    <button>提交按钮</button>
+</fieldset>
+    </form>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+</body>
+</html>
